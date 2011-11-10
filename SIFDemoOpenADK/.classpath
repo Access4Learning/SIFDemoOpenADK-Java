@@ -15,7 +15,7 @@
 	<classpathentry kind="lib" path="lib/mysql.jar"/>
 	<classpathentry kind="lib" path="lib/systemic-framework.jar"/>
 	<classpathentry kind="lib" path="lib/xercesImpl.jar"/>
-	<classpathentry kind="lib" path="lib/sifadk/SIFAU/openadk-1.0.0-AUSIF-1.1.jar"/>
-	<classpathentry kind="lib" path="lib/sifcommon-au_1.1-v2.1.jar"/>
+	<classpathentry kind="lib" path="lib/sifadk/SIFAU/openadk-1.0.0-AUSIF-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/sifcommon-au_1.2-v2.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

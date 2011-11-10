@@ -17,7 +17,7 @@ SETLOCAL ENABLEDELAYEDEXPANSION
 for /f %%a IN ('dir /b /S %LIB_PATH%\*.jar') do set AGENT_CLASS_PATH=!AGENT_CLASS_PATH!;%%a
 
 rem set the config dir and the main executable jar in the classpath
-set AGENT_CLASS_PATH=%AGENT_CLASS_PATH%;%CONFIG_PATH%;%EXE_JAR_PATH%\sifdemo-au_1.1-v1.1.jar
+set AGENT_CLASS_PATH=%AGENT_CLASS_PATH%;%CONFIG_PATH%;%EXE_JAR_PATH%\sifdemo-au_1.2-v1.1.jar
 
 echo ======================================================================================================
 echo Start Agent with JVM Settings:

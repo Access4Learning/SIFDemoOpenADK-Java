@@ -47,7 +47,7 @@ done
 #########################################
 # Add config directories to classpath
 #########################################
-AGENT_CLASS_PATH=$AGENT_CLASS_PATH:$CONFIG_PATH:$PROJ_JAR_PATH/sifdemo-au_1.1-v1.1.jar
+AGENT_CLASS_PATH=$AGENT_CLASS_PATH:$CONFIG_PATH:$PROJ_JAR_PATH/sifdemo-au_1.2-v1.1.jar
 
 echo ========================================================
 echo Classpath: $AGENT_CLASS_PATH
