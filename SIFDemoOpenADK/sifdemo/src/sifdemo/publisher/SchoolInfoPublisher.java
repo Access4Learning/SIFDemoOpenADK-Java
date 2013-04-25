@@ -22,6 +22,8 @@ import openadk.library.school.SchoolDTD;
 
 import sifdemo.publisher.iterator.SchoolInfoEventIterator;
 import sifdemo.publisher.iterator.SchoolInfoResponseIterator;
+import sifdemo.publisher.iterator.XMLFileEventIterator;
+import sifdemo.publisher.iterator.XMLFileResponseIterator;
 
 import systemic.sif.sifcommon.publisher.BasePublisher;
 import systemic.sif.sifcommon.publisher.SIFEventIterator;
@@ -40,21 +42,35 @@ public class SchoolInfoPublisher extends BasePublisher
     public void finalise()
     {
 	    logger.debug("Finalise for "+getId()+": Release Connection Pool." );
-        ConnectionManager.closeConnectionPools();
-	    logger.debug("Connecction Pool for "+getId()+" released." );
+//        ConnectionManager.closeConnectionPools();
+//	    logger.debug("Connecction Pool for "+getId()+" released." );
     }
-	
+
 	@Override
     public SIFResponseIterator getRequestedSIFObjects(Query query, Zone zone) throws ADKException, SIFException
     {
 		logger.debug("getRequestedSIFObjects called for publisher: "+getId());
-		return new SchoolInfoResponseIterator();
+		return new XMLFileResponseIterator(this);
     }
 
 	@Override
     public SIFEventIterator getSIFEvents() throws ADKException
     {
 		logger.debug("getSIFEvents called for publisher: "+getId());
-		return new SchoolInfoEventIterator();
+		return new XMLFileEventIterator(this);
     }
+
+//	@Override
+//    public SIFResponseIterator getRequestedSIFObjects(Query query, Zone zone) throws ADKException, SIFException
+//    {
+//		logger.debug("getRequestedSIFObjects called for publisher: "+getId());
+//		return new SchoolInfoResponseIterator();
+//    }
+//
+//	@Override
+//    public SIFEventIterator getSIFEvents() throws ADKException
+//    {
+//		logger.debug("getSIFEvents called for publisher: "+getId());
+//		return new SchoolInfoEventIterator();
+//    }
 }
